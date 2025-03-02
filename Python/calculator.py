@@ -4,9 +4,10 @@ from typing import List
 
 def print_help() -> None:
     """
-    Prints the help message.
+    Display the help message.
     
-    Prints a help message with basic information about how to use this Python script.
+    This function prints usage instructions for the calculator script,
+    explaining the available operations and expected command-line arguments.
     """
     help_message = f"""
     Basic Calculator
@@ -30,10 +31,17 @@ def print_help() -> None:
 
 def validate_number(value: str) -> int:
     """
-    Validates and converts a string to an integer. If the conversion fails, prints the help message and exits.
+    Convert a string to an integer, exiting if the conversion fails.
     
-    :param value: The string to convert.
-    :return: The converted integer value.
+    Args:
+        value (str): The string to convert.
+    
+    Returns:
+        int: The converted integer value.
+    
+    Exits:
+        If the value cannot be converted to an integer, prints an error message
+        and the help message, then exits the program.
     """
     try:
         return int(value)
@@ -44,11 +52,18 @@ def validate_number(value: str) -> int:
 
 def calculate(operation: str, numbers: List[int]) -> float:
     """
-    Performs the specified mathematical operation on a list of numbers.
+    Perform a mathematical operation on a list of numbers.
     
-    :param operation: The mathematical operation ('+', '-', 'x', '/', '%').
-    :param numbers: A list of integers to apply the operation on.
-    :return: The result of the calculation as a float.
+    Args:
+        operation (str): The mathematical operation ('+', '-', 'x', '/', '%').
+        numbers (List[int]): A list of integers to apply the operation on.
+    
+    Returns:
+        float: The result of the calculation.
+    
+    Exits:
+        If division or modulo by zero occurs, prints an error message and exits.
+        If an unknown operation is given, prints an error message and exits.
     """
     if operation == '+':
         return sum(numbers)

@@ -1,41 +1,72 @@
 #!/usr/bin/python3
 
-def select_mode() -> str:
-  """Select temperature conversion mode.
+def read_temperature() -> float:
+  """
+  Prompt the user to enter a temperature value and validate the input.
+  
+  This function continuously asks the user for a temperature value until a valid numerical input is provided.
+  
+  Returns:
+    float: The valid temperature input from the user.
+  """
+  while True:
+    user_response = input('Enter temperature to convert: ')
+    try:
+      temperature = float(user_response)
+      return temperature
+    except ValueError:
+      print("Invalid temperature. Please enter a numeric value.")
 
-  Set calculator conversion mode. Choosing C will convert Celsius temperatures to Fahrenheit and
-  vice versa.
+def select_mode() -> str:
+  """
+  Prompt the user to select a temperature conversion mode.
+  
+  The user must choose either 'C' to convert from Celsius to Fahrenheit or 'F' to convert from Fahrenheit to Celsius.
+  The function keeps prompting until a valid choice is entered.
+  
+  Returns:
+    str: The chosen conversion mode ('c' or 'f').
   """
   while True:
     mode = input('Choose conversion mode. Enter C to convert Celsius temperatures or F to convert Fahrenheit temperatures: ')
-    if (mode.lower() == 'c' or mode.lower() == 'f'):
-      break
+    if mode.lower() in ('c', 'f'):
+      return mode.lower()
     print('Error: Invalid option. Please choose C or F.')
-  return mode
 
 def convert_to_celsius(fahrenheit: float) -> float:
-  """Convert Fahrenheit temperature to Celsius."""
-  return (fahrenheit - 32) * 5 / 9;
+  """
+  Convert a Fahrenheit temperature to Celsius.
+  
+  Args:
+    fahrenheit (float): Temperature in Fahrenheit.
+  
+  Returns:
+    float: Equivalent temperature in Celsius.
+  """
+  return (fahrenheit - 32) * 5 / 9
 
 def convert_to_fahrenheit(celsius: float) -> float:
-  """Convert Celsius temperature to Fahrenheit."""
-  return celsius * 9 / 5 + 32;
+  """
+  Convert a Celsius temperature to Fahrenheit.
+  
+  Args:
+    celsius (float): Temperature in Celsius.
+  
+  Returns:
+    float: Equivalent temperature in Fahrenheit.
+  """
+  return celsius * 9 / 5 + 32
 
 def convert_temperature() -> None:
-  """Select mode, read temperature, and output conversion.
-
-  After selecting a temperature mode, this function reads a floating-point temperature in that unit
-  from the user and outputs the equivalent conversion.
+  """
+  Execute the temperature conversion process.
+  
+  This function prompts the user to select a conversion mode, reads a temperature value,
+  performs the conversion, and prints the result.
   """
   print('\n' + '*' * 30)
   mode = select_mode()
-  
-  temperature_input = input(f'Enter {mode.upper()}° temperature to convert: ')
-  try:
-    temperature = float(temperature_input)
-  except ValueError:
-    print('Invalid temperature. Please enter a numeric value.')
-    return
+  temperature = read_temperature()
   
   if mode == 'c':
     fahrenheit = convert_to_fahrenheit(temperature)
