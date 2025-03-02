@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def select_mode() -> str:
   """Select temperature conversion mode.
 
