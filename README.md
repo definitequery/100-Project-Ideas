@@ -1,8 +1,7 @@
 Aaron Simpson
 <br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2024-2025</i></div>
 
-# Pytudes
-## 100 Programming Projects: From Beginner to Advanced
+## Pytudes
 Python programs, usually short, for perfecting particular programming skills. Inspired by [Peter Norvig](https://github.com/norvig/pytudes).
 
 ## Absolute Beginners (1-10)
