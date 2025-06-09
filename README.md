@@ -1,16 +1,23 @@
-# 100 Programming Projects: From Beginner to Advanced
+Aaron Simpson
+<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2024-2025</i></div>
+
+# Pytudes
+## 100 Programming Projects: From Beginner to Advanced
+Python programs, usually short, for perfecting particular programming skills. Inspired by [Peter Norvig](https://github.com/norvig/pytudes).
 
 ## Absolute Beginners (1-10)
-1. Hello World - Print a simple message to the console
-2. Name Generator - Ask for a user's name and greet them
-3. Temperature Converter - Convert between Fahrenheit and Celsius
-4. Basic Calculator - Add, subtract, multiply, and divide two numbers
-5. Number Guessing Game - Computer picks a number, player tries to guess it
-6. Rock, Paper, Scissors - Classic game against the computer
-7. Dice Rolling Simulator - Simulate rolling different types of dice
-8. Word Counter - Count words in a user-input string
-9. Tip Calculator - Calculate tip based on bill amount and service quality
-10. Age Calculator - Calculate age based on birthdate
+|File|Description|Documentation|
+|---|---|---|
+|[hello_world.py](/py/hello_world.py)|Print a simple message to the console
+|[name_generator.py](/py/name_generator.py)|Ask for a user's name and greet them
+|[temperature_converter.py](/py/temperature_converter.py)|Convert between Fahrenheit and Celsius
+|Basic Calculator|Add, subtract, multiply, and divide two numbers
+|[number_guessing_game.py](/py/number_guessing_game.py)|Computer picks a number, player tries to guess it
+|Rock, Paper, Scissors|Classic game against the computer
+|Dice Rolling Simulator|Simulate rolling different types of dice
+|Word Counter|Count words in a user-input string
+|Tip Calculator|Calculate tip based on bill amount and service quality
+|Age Calculator|Calculate age based on birthdate
 
 ## Beginning to Code (11-20)
 11. Password Generator - Create random passwords with specific criteria
