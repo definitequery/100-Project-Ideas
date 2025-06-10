@@ -14,7 +14,7 @@ Python programs, usually short, for perfecting particular programming skills. In
 |[number_guessing_game.py](/py/number_guessing_game.py)|Computer picks a number, player tries to guess it
 |Rock, Paper, Scissors|Classic game against the computer
 |Dice Rolling Simulator|Simulate rolling different types of dice
-|Word Counter|Count words in a user-input string
+|[word_counter.py](/py/word_counter.py)|Count words in a user-input string
 |Tip Calculator|Calculate tip based on bill amount and service quality
 |Age Calculator|Calculate age based on birthdate
 
